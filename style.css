@@ -1,0 +1,133 @@
+body.dark-theme {
+    background: #181a1b;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #23272f;
+    padding: 40px 0 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #4fc3f7;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    color: #b0bfcf;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+nav {
+    background: #23272f;
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav .container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 12px 0;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+}
+
+nav a:hover, nav a.active {
+    color: #23272f;
+    background: #4fc3f7;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+h2 {
+    color: #4fc3f7;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.project-card {
+    background: #23272f;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: 24px;
+    flex: 1 1 250px;
+    min-width: 220px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1.5px solid #23272f;
+}
+
+.project-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(79,195,247,0.15);
+    border-color: #4fc3f7;
+}
+
+footer {
+    background: #23272f;
+    color: #b0bfcf;
+    text-align: center;
+    padding: 18px 0;
+    border-top: 1px solid #222;
+    font-size: 1em;
+}
+
+a {
+    color: #4fc3f7;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    .projects-grid {
+        flex-direction: column;
+    }
+    .container {
+        padding: 24px 8px;
+    }
+    nav .container {
+        gap: 12px;
+    }
+}
+
+.fade-init {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
