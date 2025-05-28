@@ -1,4 +1,3 @@
-// Smooth scroll untuk menu navigasi
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -11,7 +10,6 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
-// Fade-in animasi saat section muncul di viewport
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -25,7 +23,6 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Highlight menu aktif saat scroll
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
     let scrollPos = window.scrollY || window.pageYOffset;
